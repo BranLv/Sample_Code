@@ -2,6 +2,8 @@ package Cmaster;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,13 +22,20 @@ public static void main(String[] args){
 
  //create panel
      JPanel panel1 = new JPanel();
-     panel1.setBackground(Color.BLACK);
+     panel1.setBackground(Color.BLUE);
 
-
-
-
-
-
+ //create buttons
+     JButton DisplayButton = new JButton("DISPLAY");
+    
+     
+  //create label
+     JLabel print = new JLabel();
+     print.setText("Image displayed: " );
+     
+ //Image intitialized
+ Buffered image1;
+ 
+//actionlistener for Displaybutton
 
 
 
@@ -35,8 +44,8 @@ public static void main(String[] args){
 
  //add to primary label
       panel1.add(print);
-      panel1.add(UpButton);
-      panel1.add(DownButton);
+      panel1.add(DisplayButton);
+    
       
       //pack everything
      mainWindow.getContentPane().add(panel1);
