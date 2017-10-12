@@ -1,0 +1,60 @@
+
+package java_master;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class Java_Master {
+    
+    public static void main(String[] args) {
+         //create frame
+       JFrame mainWindow = new JFrame("Java_Master");
+     mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     mainWindow.setPreferredSize(new Dimension(500,500));
+     
+      //create panel
+     JPanel panel1 = new JPanel();
+     panel1.setBackground(Color.WHITE);
+     
+     //create button
+     JButton DisplayButton = new JButton("Display Secret Message");
+     
+     //add listener
+     DisplayButton.addActionListener(
+     new ActionListener(){
+      
+         public void actionPerformed(ActionEvent e){
+             String message = "Java is the best programming language";
+             System.out.println("Message: " + message);
+         }
+     }
+     
+     
+     );
+     
+     panel1.add(DisplayButton);
+      
+      //pack everything
+     mainWindow.getContentPane().add(panel1);
+     mainWindow.pack();
+     
+     
+     //Make Visibe
+     mainWindow.setVisible(true);
+    }
+}
+
+      
+             
+       
+
+
+
+             
