@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
@@ -26,13 +27,18 @@ public class Java_Master {
      //create button
      JButton DisplayButton = new JButton("Display Secret Message");
      
+     //create label
+     JLabel print = new JLabel();
+     print.setText("Message: " );
+     
+     
      //add listener
      DisplayButton.addActionListener(
      new ActionListener(){
       
          public void actionPerformed(ActionEvent e){
              String message = "Java is the best programming language";
-             System.out.println("Message: " + message);
+             print.setText("Message: " + message);
          }
      }
      
@@ -40,7 +46,9 @@ public class Java_Master {
      );
      
      panel1.add(DisplayButton);
-      
+     panel1.add(print);
+     
+     
       //pack everything
      mainWindow.getContentPane().add(panel1);
      mainWindow.pack();
