@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void move_disks(int, int, int, int);
+int main(void) {
+	int disk;
+	cout << "How many discks?" << endl;
+	cin >> disk;
+	move_disks(disk, 1, 2, 3);
+
+	system("pause");
+}
+void move_disks(int n, int src, int dest, int spare) {
+
+	if (n == 1) {
+		cout << "move disk 1 from " << src << " to " << dest << endl;
+	}
+	else {
+		move_disks(n - 1, src, spare, dest);
+		cout << "move disk "<<n <<" from "<< src << " to " << dest << endl;
+		move_disks(n - 1, spare, dest, src);
+	}
+}
