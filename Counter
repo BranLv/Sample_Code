@@ -1,0 +1,77 @@
+package homework_6;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+
+public class Homework_6 {
+ public static int count = 100;
+    
+    public static void main(String[] args) {
+        
+        //create frame
+     JFrame mainWindow = new JFrame("Up_Down");
+     mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     mainWindow.setPreferredSize(new Dimension(500,500));
+     
+     //create panel
+     JPanel panel1 = new JPanel();
+     panel1.setBackground(Color.BLACK);
+     
+     //create buttons
+     JButton UpButton = new JButton("Up");
+     JButton DownButton = new JButton("Down");
+     
+     //create label
+     JLabel print = new JLabel();
+     print.setText("Count: " );
+     
+     
+     //add listener
+     UpButton.addActionListener(
+     new ActionListener(){
+        public int count = 100;
+         public void actionPerformed(ActionEvent e){
+             print.setText("Count: "  + count);
+             count++;
+             
+         }
+     }
+     
+     
+     );
+      DownButton.addActionListener(
+     new ActionListener(){
+         public int count = 100;
+         public void actionPerformed(ActionEvent e){
+             print.setText("Count: "  + count);
+             count--;
+             
+         }
+     }
+     
+     
+     );
+      
+      //add to primary label
+      panel1.add(print);
+      panel1.add(UpButton);
+      panel1.add(DownButton);
+      
+      //pack everything
+     mainWindow.getContentPane().add(panel1);
+     mainWindow.pack();
+     
+     
+     //Make Visibe
+     mainWindow.setVisible(true);
+    }
+    
+}
