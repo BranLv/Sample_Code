@@ -1,5 +1,5 @@
 
-package java_master;
+package java_basic;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
-public class Java_Master {
+public class Java_Basic {
     
     public static void main(String[] args) {
          //create frame
